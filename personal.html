@@ -307,9 +307,7 @@
         var validation = Array.prototype.filter.call(forms, function(form) {
           form.addEventListener('submit', function(event) {
             if (form.checkValidity() === false) {
-           alert("please enter valid email")
-                else{
-                    alert("Your form has registred")
+                  event.preventDefault();
               event.stopPropagation();
             }
             form.classList.add('was-validated');
